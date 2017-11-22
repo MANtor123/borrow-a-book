@@ -1,0 +1,7 @@
+book-lend:not(.oj-complete){
+  visibility: hidden;
+}
+
+book-lend{
+
+}
