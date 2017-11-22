@@ -5,7 +5,7 @@
 /*
  * Your incidents ViewModel code goes here
  */
-define(['ojs/ojcore', 'knockout', 'jquery','jet-composites/book-lend/loader'],
+define(['ojs/ojcore', 'knockout', 'jquery','jet-composites/my-feedback/loader'],
     function(oj, ko, $) {
 
         function IncidentsViewModel() {
