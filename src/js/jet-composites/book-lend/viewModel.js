@@ -5,7 +5,7 @@
 define(
     ['ojs/ojcore', 'knockout', 'jquery'], function (oj, ko, $) {
     'use strict';
-    
+
     function ExampleComponentModel(context) {
         var self = this;
         self.composite = context.element;
@@ -16,12 +16,17 @@ define(
             //Store a reference to the properties for any later use
             self.properties = propertyMap;
 
-            //Parse your component properties here 
+            //Parse your component properties here
 
         });
     };
-    
-    //Lifecycle methods - uncomment and implement if necessary 
+
+    function listNames(){
+    self.listOfnames = ko.observableArray(['Mponeng', 'Nelson', 'Loyiso', 'Yamkela'])
+    }
+    listNames();
+
+    //Lifecycle methods - uncomment and implement if necessary
     //ExampleComponentModel.prototype.activated = function(context){
     //};
 

@@ -5,7 +5,7 @@
 /*
  * Your incidents ViewModel code goes here
  */
-define(['ojs/ojcore', 'knockout', 'jquery'],
+define(['ojs/ojcore', 'knockout', 'jquery','jet-composites/book-lend/loader'],
     function(oj, ko, $) {
 
         function IncidentsViewModel() {
@@ -43,7 +43,7 @@ define(['ojs/ojcore', 'knockout', 'jquery'],
 
 
             /**
-             * Optional ViewModel method invoked after the bindings are applied on this View. 
+             * Optional ViewModel method invoked after the bindings are applied on this View.
              * If the current View is retrieved from cache, the bindings will not be re-applied
              * and this callback will not be invoked.
              * @param {Object} info - An object with the following key-value pairs:

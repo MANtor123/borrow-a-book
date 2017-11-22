@@ -5,13 +5,14 @@
   "version": "1.0.0",
   "jetVersion": "^4.1.0",
   "properties": {
+
   },
   "methods": {
 
-  }, 
+  },
   "events": {
 
-  }, 
+  },
   "slots": {
 
   }
