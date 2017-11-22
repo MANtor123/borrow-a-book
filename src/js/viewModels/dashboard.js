@@ -5,14 +5,43 @@
 /*
  * Your dashboard ViewModel code goes here
  */
-define(['ojs/ojcore', 'knockout', 'jquery'],
+define(['ojs/ojcore', 'knockout', 'jquery','jet-composites/book-details/loader'],
  function(oj, ko, $) {
-  
+
     function DashboardViewModel() {
-      var self = this;
+      //var self = this;
       // Below are a subset of the ViewModel methods invoked by the ojModule binding
       // Please reference the ojModule jsDoc for additional available methods.
 
+      // },
+      // {
+      //   Image : "https://images-na.ssl-images-amazon.com/images/I/514UJKuVmdL._SX305_BO1,204,203,200_.jpg",
+      //   Genre : "Tragedy Drama",
+      //   Title : "To Kill A Mockingbird",
+      //   Author: "Harper Lee",
+      //   Description: "no"
+      // },
+      // {
+      //   Image : "https://images-na.ssl-images-amazon.com/images/I/51DUJ9xNG0L._SX307_BO1,204,203,200_.jpg",
+      //   Genre : "Fantasy",
+      //   Title : "Breaking Dawn" ,
+      //   Author: "Stephenie Meyers" ,
+      //   Description:"no"
+      // },
+      // {
+      //   Image : "https://cdn.vox-cdn.com/uploads/chorus_asset/file/8456431/The_Gunslinger__1988_trade_paperback_.jpg",
+      //   Genre : "Adventure",
+      //   Title : "The Dark Tower" ,
+      //   Author: "Stephen  King",
+      //   Description:"no"
+      // },
+      // {
+      //   Image : "https://hpmedia.bloomsbury.com/rep/s/978%201408855928_309033.jpeg",
+      //   Genre : "Adventure",
+      //   Title : "Harry Potter And The Cursed Child",
+      //   Author: " J.K Rowling",
+      //   Description:"no"
+      // }])
       /**
        * Optional ViewModel method invoked when this ViewModel is about to be
        * used for the View transition.  The application can put data fetch logic
@@ -43,7 +72,7 @@ define(['ojs/ojcore', 'knockout', 'jquery'],
 
 
       /**
-       * Optional ViewModel method invoked after the bindings are applied on this View. 
+       * Optional ViewModel method invoked after the bindings are applied on this View.
        * If the current View is retrieved from cache, the bindings will not be re-applied
        * and this callback will not be invoked.
        * @param {Object} info - An object with the following key-value pairs:
