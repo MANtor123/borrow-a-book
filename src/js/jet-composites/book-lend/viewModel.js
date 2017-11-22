@@ -19,12 +19,29 @@ define(
             //Parse your component properties here
 
         });
+
+
+
     };
 
-    function listNames(){
-    self.listOfnames = ko.observableArray(['Mponeng', 'Nelson', 'Loyiso', 'Yamkela'])
+
+    self.aboutTheBook = ko.observable('gbhfcejbfjhnhyygtvhjhnujhbuj')
+
+    function AppViewModel() {
+        this.firstName = ko.observable("");
+        this.lastName = ko.observable("");
+        this.emailAddress = ko.observable('@gmail.com')
+
+        this.fullName = ko.computed(function(){
+        return this.firstName() + ' ' + this.lastName();
+        }, this)
+
+        this.capitalizeLastName = function() {
+        var currentVal = this.lastName()
+        this.lastName(currentVal.toUpperCase())
+        }
     }
-    listNames();
+
 
     //Lifecycle methods - uncomment and implement if necessary
     //ExampleComponentModel.prototype.activated = function(context){

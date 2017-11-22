@@ -31,18 +31,33 @@
     button:hover, a:hover {
       opacity: 0.7;
     }
+
+    .book {
+
+      height: 27em;
+    }
+
+
     </style>
   </head>
   <body style="display=inline-block, width = 100%, border:1px red">
-    <div class="card">
-      <ul data-bind="foreach:listOfBooks">
-        <a>  <img  data-bind="attr:{src: $data.Image}" alt="John" style="width:100%"/></a>
-        <p data-bind="text : $data.Genre"></p>
-        <p class = "title" data-bind="text : $data.Title"></p>
-        <p data-bind="text : $data.Author"></p>
-      </ul>
-      <br>
+    <div class="container">
+      <div class="row">
+        <ul data-bind="foreach:listOfBooks">
+        <div class="col-md-2">
+          <div class="card book">
+              <a>  <img  data-bind="attr:{src: $data.Image}" alt="John" style="width:100%"/></a>
+              <p data-bind="text : $data.Genre"></p>
+              <p class = "title" data-bind="text : $data.Title"></p>
+              <p data-bind="text : $data.Author"></p>
 
+              <button type="button" name="button" data-bind="visible : !borrowed, click: $parent.borrowBook" >Borrow</button>
+              <button type="button" name="button" data-bind="visible : borrowed, click: $parent.returnBook" >Return</button>
+
+          </div>
+        </div>
+      </ul>
+      </div>
     </div>
 
   </body>
