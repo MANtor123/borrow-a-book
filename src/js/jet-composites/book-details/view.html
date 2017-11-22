@@ -9,12 +9,11 @@
     <title></title>
     <style>
     .card {
-      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-      max-width: 200px;
       margin: auto;
-      /*text-align: center;*/
+      text-align: center;
       font-family: arial;
-      /*display: inline-block;*/
+      width: 100%;
+      /*display: inline-flex;*/
     }
 
     .title {
@@ -51,14 +50,30 @@
               <p class = "title" data-bind="text : $data.Title"></p>
               <p data-bind="text : $data.Author"></p>
 
-              <button type="button" name="button" data-bind="visible : !borrowed, click: $parent.borrowBook" >Borrow</button>
-              <button type="button" name="button" data-bind="visible : borrowed, click: $parent.returnBook" >Return</button>
+              <button type="button" name="button" data-bind="visible : !borrowed(), click: $parent.borrowBook" >Borrow</button>
+              <button type="button" name="button" data-bind="visible : borrowed(), click: $parent.returnBook" >Return</button>
 
           </div>
         </div>
       </ul>
-      </div>
     </div>
+      </div>
+    </body>
 
-  </body>
+    <!-- =======
+</head>
+    </style>
+
+    <div class="card" data-bind="foreach:listOfBooks">
+      <ul>
+        <a>  <img  data-bind="attr:{src: $data.Image}" alt="John" style="width:100%"/></a>
+      <p><span data-bind="text : $data.Genre"></span>
+        <span class = "title" data-bind="text : $data.Title"></span>
+        <span data-bind="text : $data.Author"></span>
+      <span data-bind="text : $data.Description"></span></p>
+
+      </ul>
+>>>>>>> 0fbf9ccd73fd119a8dac3a812d72f6c5ef1d5128
+    </div>
+  </body> -->
 </html>

@@ -8,19 +8,28 @@ define(
 
     function ExampleComponentModel(context) {
         var self = this;
-        self.composite = context.element;
 
+        self.composite = context.element;
         self.visibleSection = ko.observable("");
+        self.username = ko.observable("");
+
+        self.borrowedBy = ko.observableArray([]);
 
         self.borrowBook = function(book){
-          //find the book in the book list and set borrowed to true
-          alert(book.Title)
+
+            if (!book.borrowed()) {
+              book.borrowed(true);
+            }
+
         }
 
         self.returnBook = function(book){
           //find the book in the book list and set borrowed to false
 
-          alert(book.Title)
+          if (book.borrowed()) {
+            book.borrowed(false);
+          }
+
         }
 
 
@@ -51,7 +60,7 @@ define(
       Title : "Othello",
       Author: "William Shakespeare",
       Description: "no",
-      borrowed : true
+      borrowed : ko.observable(true)
 
           },
       {
@@ -60,7 +69,7 @@ define(
         Title : "To Kill A Mockingbird",
         Author: "Harper Lee",
         Description: "no",
-        borrowed : false
+        borrowed : ko.observable(true)
       },
       {
         Image : "https://images-na.ssl-images-amazon.com/images/I/51DUJ9xNG0L._SX307_BO1,204,203,200_.jpg",
@@ -68,7 +77,7 @@ define(
         Title : "Breaking Dawn" ,
         Author: "Stephenie Meyers" ,
         Description:"no",
-        borrowed : false
+        borrowed : ko.observable(false)
       },
       {
         Image : "https://cdn.vox-cdn.com/uploads/chorus_asset/file/8456431/The_Gunslinger__1988_trade_paperback_.jpg",
@@ -76,7 +85,7 @@ define(
         Title : "The Dark Tower" ,
         Author: "Stephen  King",
         Description:"no",
-        borrowed : true
+        borrowed : ko.observable(false)
       },
       {
         Image : "https://hpmedia.bloomsbury.com/rep/s/978%201408855928_309033.jpeg",
@@ -84,7 +93,7 @@ define(
         Title : "Harry Potter And The Cursed Child",
         Author: " J.K Rowling",
         Description:"no",
-        borrowed : false
+        borrowed : ko.observable(true)
       }])
 
     //Lifecycle methods - uncomment and implement if necessary

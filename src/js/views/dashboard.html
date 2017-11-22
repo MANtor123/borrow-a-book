@@ -44,7 +44,7 @@
   }
   </style>
   <body>
-    <h1>Loyiso CodeX</h1>
+
 
     <script type="text/javascript" src="js/libs/require/require.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
@@ -92,7 +92,17 @@
               </div>
       <script type="text/javascript" src="js/index.js"></script> -->
 
-      <book-details></book-details>
+      <div class="" data-bind="visible : !loggedIn()">
+          <h1>login</h1>
+          <input type="text" name="" value="" placeholder="Username" data-bind="textInput: username" >
+          <button type="button" name="button" data-bind="click: login" >Login</button>
+      </div>
+      <div class="" data-bind="visible : loggedIn()">
+          <h1 data-bind="text: message" ></h1>
+
+        <book-details listOfBooks="{{books}}"></book-details>
+      </div>
+
   </body>
 
   </div>
