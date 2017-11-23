@@ -17,7 +17,7 @@
 
 <div id="div2">
 
-  <oj-label for="text-input">Name of company
+  <oj-label for="text-input">Name
   <oj-input-text id="text-input" value="{{value}}"></oj-input-text>
   </oj-label>
 
@@ -26,13 +26,13 @@
 
 <div id="div1">
 
-  <oj-label for="text-area">How did your interview go?
+  <oj-label for="text-area">How was the book
   <oj-text-area id="text-area" value="{{feedback}}">
   </oj-text-area>
   </oj-label>
 <br/>
 
-<oj-label for="text-area">What did they ask you?
+<oj-label for="text-area">suggestions
   <oj-text-area id="text-area" value="{{questions}}">
   </oj-text-area>
   </oj-label>
@@ -47,8 +47,8 @@
 
 <div class="col-sm-4">
 <oj-label for="text-input">Feedback Table</oj-label>
-<oj-table id='table' aria-label='Feedback Table' class="table table-striped table-hover table-bordered" width="80%" data='[[datasource]]' columns-default.sortable='disabled' columns='[{"headerText": "Company Name",
-                   "field": "companyName"},
+<oj-table id='table' aria-label='Feedback Table' class="table table-striped table-hover table-bordered" width="80%" data='[[datasource]]' columns-default.sortable='disabled' columns='[{"headerText": "Name",
+                   "field": "Name"},
                   {"headerText": "Feed Back",
                    "field": "feedback"}]'>
 </oj-table>
@@ -59,7 +59,7 @@
 
   <div class="col-sm-4">
 
-<oj-label for="text-input">Questions Asked</oj-label>
+<oj-label for="text-input">Suggestions</oj-label>
 <div class="list-group">
 <ul data-bind="foreach: feedbackArray">
   <a href="#" class="list-group-item" data-bind="text: $data.questions"></a>
